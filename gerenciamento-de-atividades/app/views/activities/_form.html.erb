@@ -7,6 +7,7 @@
         <%= f.radio_button :activity_type, "Administrativa", label: "Administrativa" %>
     <% end %>
     <%= f.submit "Salvar", class: "btn btn-success" %>
-    <%= f.button "Limpar Formulário", type: :reset, class: "btn" %>
+    <%= f.button "Limpar Formulário", type: :reset, class: "btn btn-default" %>
+    <%= link_to 'Voltar', activities_path , class: "btn btn-default" %>
   </div>
 <% end %>
