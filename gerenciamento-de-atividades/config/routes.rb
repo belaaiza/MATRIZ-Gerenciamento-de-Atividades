@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   root 'activities#index'
   get 'index' => 'activities#index', :as => 'home'
 
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
