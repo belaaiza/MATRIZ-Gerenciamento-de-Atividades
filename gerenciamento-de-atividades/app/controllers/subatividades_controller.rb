@@ -14,7 +14,12 @@ class SubatividadesController < ApplicationController
 
   # GET /subatividades/new
   def new
+   # activity = Activity.find(params[:activity_id])
     @subatividade = Subatividade.new
+    @activity_id = params[:activity_id]
+    puts "olar"*20
+    puts params[:activity_id]
+    puts "olar"*20
   end
 
   # GET /subatividades/1/edit
@@ -25,6 +30,11 @@ class SubatividadesController < ApplicationController
   # POST /subatividades.json
   def create
     @subatividade = Subatividade.new(subatividade_params)
+    @subatividade.activity_id = session[:activity_id]
+    puts "&"*80
+    puts @subatividade.activity_id
+    puts "&"*80
+    #@subatividade = current_activity.subatividades.build(params[:subatividade])
 
     respond_to do |format|
       if @subatividade.save

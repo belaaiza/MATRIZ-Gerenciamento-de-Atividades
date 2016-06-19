@@ -27,8 +27,7 @@
         <td><%= activity.activity_type %></td>
         <td><%=l activity.created_at %></td>
         <td>
-          <%= link_to t('.edit', :default => t("Adicionar Subatividade")),
-                      edit_activity_path(activity), :class => 'btn btn-default btn-xs' %>
+          <%= link_to "Adicionar Subatividade", { :controller => "subatividades", :action => "new", :activity_id => activity.id } %>
           <%= link_to t('.edit', :default => t("Ver Subatividades")),
                       edit_activity_path(activity), :class => 'btn btn-default btn-xs' %>
           <%= link_to t('.edit', :default => t("Editar")),

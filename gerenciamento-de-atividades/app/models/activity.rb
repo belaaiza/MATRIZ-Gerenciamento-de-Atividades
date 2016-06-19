@@ -1,4 +1,6 @@
 class Activity < ActiveRecord::Base
+	has_many :subatividades
+
 	validates :name, length: { maximum: 100, too_long: "O nome deve ter no máximo %{count} caracteres"}
 	validates_presence_of :name, message: "O nome não pode ser vazio"
 	validates_presence_of :description, message: "A descrição não pode ser vazia"

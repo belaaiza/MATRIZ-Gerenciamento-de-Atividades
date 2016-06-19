@@ -7,6 +7,7 @@ class CreateSubatividades < ActiveRecord::Migration
       t.string :location
       t.string :progress
 
+      t.references :activity
       t.timestamps null: false
     end
   end
